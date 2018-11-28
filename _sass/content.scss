@@ -1,0 +1,25 @@
+@import "vars";
+
+.main-content {
+    @include large {
+        margin-left: #{$sidebar-width};
+    }
+}
+
+.main-content-container {
+    @include super-large {
+        max-width: 1090px;
+    }
+}
+
+.main-content-article {
+    @include extra-large {
+        width: calc(100% - #{$sidebar-width} - 64px);
+    }
+
+    @include large {
+        padding: 64px;
+    }
+
+    padding: 32px;
+}
