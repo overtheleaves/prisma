@@ -1,14 +1,10 @@
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ site.brand }} - {{ site.title }}</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
-    {% if site.meta_author %}
-    <meta name="author" content="{{ site.meta_author }}">
-    {% endif %}
-    {% if site.use_fontawesome %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    {% endif %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/default.css">
-</head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="{{ site.description }}">
+{% if site.meta_author %}
+<meta name="author" content="{{ site.meta_author }}">
+{% endif %}
+{% if site.use_fontawesome %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+{% endif %}

@@ -1,25 +1,39 @@
 @import "vars";
 
 .main-content {
-    @include large {
-        margin-left: #{$sidebar-width};
-    }
+    margin: 0px;
 }
 
 .main-content-container {
-    @include super-large {
-        max-width: 1090px;
-    }
-}
 
-.main-content-article {
-    @include extra-large {
-        width: calc(100% - #{$sidebar-width} - 64px);
+    @media (min-width: 1560px) {
+        max-width: calc(#{$gallery-card-width} * 6);
     }
 
-    @include large {
-        padding: 64px;
+    @media (min-width: 1300px) and (max-width: 1559px) {
+        max-width: calc(#{$gallery-card-width} * 5);
     }
 
-    padding: 32px;
+    @media (min-width: 1040px) and (max-width: 1299px) {
+        max-width: calc(#{$gallery-card-width} * 4);
+    }
+
+    @media (min-width: 780px) and (max-width: 1039px) {
+        max-width: calc(#{$gallery-card-width} * 3);
+    }
+
+    @media (min-width: 520px) and (max-width: 779px) {
+        max-width: calc(#{$gallery-card-width} * 2);
+    }
+
+    @media (min-width: 281px) and (max-width: 519px) {
+        width: 300px;
+    }
+
+    @media (max-width: 280px) {
+        width: calc(#{$gallery-card-width});
+    }
+
+    margin-left: auto;
+    margin-right: auto;
 }

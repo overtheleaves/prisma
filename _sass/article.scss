@@ -1,0 +1,15 @@
+@import "vars";
+
+.main-content .article {
+    @include large {
+        width: calc(100% - 128px);
+        padding: 64px;
+    }
+
+    @include extra-large {
+        width: calc(100% - 128px);
+        padding: 64px;
+    }
+
+    padding: 32px;
+}

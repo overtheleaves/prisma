@@ -1,22 +1,15 @@
 // screen breakpoints
-$super-large-min-width: 1340px !default;
 $extra-large-min-width: 1200px !default;
 $large-min-width: 992px !default;
 $medium-min-width: 768px !default;
 $small-min-width: 576px !default;
 
+$gallery-card-width: 260px !default;
+
 // colors
 $highlight-bg-color: #e74c3c !default;
 
-// width/height
-$sidebar-width: 250px !default;
-
-// mixin
-@mixin super-large {
-    @media (min-width: #{$super-large-min-width}) {
-        @content;
-    }
-}
+// mixin media
 
 @mixin extra-large {
     @media (min-width: #{$extra-large-min-width}) {
@@ -25,7 +18,13 @@ $sidebar-width: 250px !default;
 }
 
 @mixin large {
-    @media (min-width: #{$large-min-width}) {
+    @media (min-width: #{$large-min-width}) and (max-width: #{$extra-large-min-width}){
+        @content;
+    }
+}
+
+@mixin medium {
+    @media (min-width: #{$medium-min-width}) and (max-width: #{$large-min-width}) {
         @content;
     }
 }

@@ -1,0 +1,59 @@
+@import "vars";
+
+.main-content .gallery {
+    padding: 32px 0px 32px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    line-height: 0;
+}
+
+.gallery .item {
+    @media (max-width: 519px) {
+        max-width: 100%;
+    }
+
+    max-width: 260px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.gallery .item .item-image {
+    width: calc(100% - 20px);
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.gallery .item .item-info {
+    line-height: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.gallery .item .item-title {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    padding-top: 4px;
+}
+
+.gallery .item .item-date {
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+    display: block;
+    font-weight: 200;
+}
+
+
+.gallery .item img {
+    width: 100%;
+}

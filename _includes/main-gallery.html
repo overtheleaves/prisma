@@ -1,0 +1,19 @@
+<main class="main-content">
+    <div class="main-content-container">
+        <div class="main-content gallery">
+            {% for post in site.posts %}
+                <div class="item" onmouseover="">
+                    <a class="item-inner" href="{{ post.url }}">
+                        <div class="item-image">
+                            <img src="{{site.baseurl}}/{{ post.thumbnail }}"/>
+                        </div>
+                        <div class="item-info">
+                            <span class="item-title">{{post.title}}</span>
+                            <span class="item-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
