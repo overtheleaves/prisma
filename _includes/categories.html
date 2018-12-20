@@ -1,0 +1,9 @@
+<aside class="categories-container">
+    <a href="#" class="nav-toggle">
+        <i class="fa fa-fw fa-times"></i>
+    </a>
+
+    {% for category in site.categories %}
+        <a class="category" href="/">{{ category | first }}</a>
+    {% endfor %}
+</aside>

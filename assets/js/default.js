@@ -1,3 +1,12 @@
-var localRouter = new LocalRouter('content');
+// nav toggle
+var categoryElem = document.querySelector('.categories-container');
 
-localRouter.addRoute('/the_element_of_cs/chapter1', '/the_element_of_cs/chapter1.html');
+document.querySelector('.categories-container .nav-toggle')
+.onclick = function() {
+    categoryElem.classList.toggle('show');
+};
+
+document.querySelector('.nav-container .nav-toggle')
+.onclick = function() {
+    categoryElem.classList.toggle('show');
+};

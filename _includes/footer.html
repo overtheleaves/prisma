@@ -1,4 +1,7 @@
 <footer class="footer">
-    <div class="footer-container"> </div>
-    <div class="copyright"></div>
+    <div class="footer-container">
+        &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
+        <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp;
+        <a href="https://github.com/overtheleaves/prisma-theme" rel="nofollow">Prisma Theme</a>.
+    </div>
 </footer>

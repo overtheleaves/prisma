@@ -1,10 +1,114 @@
+@import "vars";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
+* {
+    box-sizing: border-box;
+}
 body {
+    background-color: #f0f0f0;
     margin: 0px;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
+}
+
+#header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    padding: 10px;
+    display: flex;
+}
+
+.nav-brand-logo {
+    @include small {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.nav-container .nav-toggle {
+    display: none;
+
+    @include small {
+        display: block;
+        color: #{$gray-highlight-color};
+        text-align: left;
+        font-size: 30px;
+    }
+}
+
+.categories-container .nav-toggle {
+    display: none;
+    @include small {
+        display: block;
+        color: white;
+        text-align: left;
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+
+.nav-brand-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.categories-container {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+
+    @include small {
+        width: 250px;
+        height: 100%;
+        background-color: #{$green-highlight-color};
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        margin: 0;
+        opacity: .95;
+        transform: translateX(-250px);
+        transition: transform .3s;
+    }
+}
+
+.categories-container.show {
+    transform: translateX(0px);
+}
+
+.categories-container .category {
+    border-radius: 5px;
+    background-color: #{$green-highlight-color};
+    padding: 5px 10px 5px 10px;
+    color: white;
+    font-size: 14px;
+    margin-left: 4px;
+    display: inline-block;
+    text-align: center;
+
+    @include small {
+        display: block;
+        padding: 10px 20px 10px 20px;
+        text-align: left;
+    }
+}
+
+.clear {clear:both; height:0; overflow:hidden;}
+
+.footer {
+    padding: 10px 10px 50px 10px;
+    background-color: #606060;
+    color: #999999;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #cccccc;
 }
