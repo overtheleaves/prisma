@@ -1,15 +1,112 @@
 @import "vars";
 
-.main-content .article {
-    @include large {
-        width: calc(100% - 128px);
-        padding: 64px;
-    }
+.main-content-container.article {
 
     @include extra-large {
-        width: calc(100% - 128px);
-        padding: 64px;
+        width: 860px;
     }
 
-    padding: 32px;
+    @include large {
+        width: 860px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @include small {
+        padding: 32px;
+    }
+
+    padding: 64px;
+    color: #{$default-text-color};
+}
+
+.article h1 {
+    font-size: 4rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 10rem;
+
+    @include small {
+        font-size: 3rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 6rem;
+    }
+}
+
+.article h2 {
+    font-size: 2rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 6rem;
+    opacity: .75;
+    text-align: right;
+    font-weight: 500;
+
+    @include small {
+        font-size: 1.75rem;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 4rem;
+    }
+}
+
+.article h3 {
+    font-size: 1.75rem;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+
+    @include small {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.article h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    @include small {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+.article h5 {
+    font-size: 1.25rem;
+}
+
+.article h6 {
+    font-size: 1rem;
+}
+
+.article p {
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+}
+
+.article img {
+    width: 100%;
+}
+
+.article pre {
+    background-color: #ddd;
+    margin-top: 0px;
+    margin-bottom: 1.5rem;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.article code {
+    background-color: #ddd;
+    font-family: monospace;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    padding: .1rem;
 }

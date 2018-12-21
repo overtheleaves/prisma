@@ -1,14 +1,40 @@
 @import "vars";
 
-#main .gallery {
+.main-content-container.gallery {
+    @media (min-width: 1040px) {
+        max-width: calc(#{$gallery-card-width} * 4);
+    }
+
+    @media (min-width: 780px) and (max-width: 1039px) {
+        max-width: calc(#{$gallery-card-width} * 3);
+    }
+
+    @media (min-width: 520px) and (max-width: 779px) {
+        max-width: calc(#{$gallery-card-width} * 2);
+    }
+
+    @media (min-width: 281px) and (max-width: 519px) {
+        width: 300px;
+    }
+
+    @media (max-width: 280px) {
+        width: calc(#{$gallery-card-width});
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content-container.gallery {
     padding: 32px 0px 32px 0px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
     line-height: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.gallery .item {
+.main-content-container.gallery .item {
     @media (max-width: 519px) {
         max-width: 100%;
     }
@@ -17,43 +43,44 @@
     height: 100%;
     top: 0px;
     left: 0px;
-    float: left;
     padding-bottom: 20px;
 }
 
-.gallery .item .item-image {
+.main-content-container.gallery .item .item-image {
     width: calc(100% - 20px);
     height: 150px;
     display: block;
     overflow: hidden;
     margin-left: 10px;
     margin-right: 10px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
 }
 
-.gallery .item .item-info {
+.main-content-container.gallery .item .item-info {
     line-height: normal;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.gallery .item .item-title {
+.main-content-container.gallery .item .item-title {
     text-align: left;
     font-size: 16px;
-    color: #333;
+    color: #{$default-text-color};
     font-weight: 600;
     display: block;
     padding-top: 4px;
 }
 
-.gallery .item .item-date {
+.main-content-container.gallery .item .item-date {
     text-align: left;
     font-size: 14px;
-    color: #666;
+    color: #{$light-text-color};
     display: block;
     font-weight: 200;
 }
 
 
-.gallery .item img {
+.main-content-container.gallery .item img {
     width: 100%;
 }

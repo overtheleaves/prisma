@@ -1,6 +1,5 @@
 <main id="main">
-    <div class="main-content-container">
-        <div class="main-content gallery">
+    <div class="main-content-container gallery">
             {% for post in site.posts %}
                 <div class="item" onmouseover="">
                     <a class="item-inner" href="{{ post.url }}">
@@ -16,5 +15,4 @@
             {% endfor %}
             <div class="clear"></div>
         </div>
-    </div>
 </main>

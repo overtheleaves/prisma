@@ -1,12 +1,25 @@
 <header id="header">
     <nav id="nav">
         <div class="nav-container">
+
             <a href="#" class="nav-toggle">
                 <i class="fa fa-bars"></i>
             </a>
+
             <a href="/" class="nav-brand-logo">
-                <img src="{{site.logo_imageurl}}" >
+                <img src="{{site.big_logo}}" class="big"/>
             </a>
+
+            <div class="categories">
+            {% for category in site.categories %}
+                <a class="category" href="/">{{ category | first }}</a>
+            {% endfor %}
+            </div>
+            <!--
+            <a href="#" class="nav-search">
+                <i class="fa fa-search"></i>
+            </a>
+            -->
         </div>
     </nav>
 </header>

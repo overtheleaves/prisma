@@ -7,15 +7,15 @@ $small-min-width: 576px !default;
 $gallery-card-width: 260px !default;
 
 // colors
-$gray-highlight-color: #999999;
+$default-highlight-color: #999999;
 $pink-highlight-color: #99657a;
 $violet-highlight-color: #7f6599;
 $blue-highlight-color: #657d99;
 $green-highlight-color: #65996f;
-$red-highlight-coloir: #996565;
+$red-highlight-color: #996565;
 
-// width/height size
-$navigation_height_small: 60px !default;
+$default-text-color: #333;
+$light-text-color: #666;
 
 // mixin media
 @mixin extra-large {

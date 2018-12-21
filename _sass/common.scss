@@ -4,10 +4,17 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
 body {
     background-color: #f0f0f0;
-    margin: 0px;
+    margin: 0px 0px 150px 0px;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
 }
 
 a {
@@ -22,13 +29,42 @@ a {
 .nav-container {
     padding: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 1040px) {
+        max-width: calc(#{$gallery-card-width} * 5);
+    }
+
+    @media (min-width: 780px) and (max-width: 1039px) {
+        max-width: calc(#{$gallery-card-width} * 4);
+    }
+
+    @media (min-width: 520px) and (max-width: 779px) {
+        max-width: calc(#{$gallery-card-width} * 3);
+    }
+
+    @media (min-width: 281px) and (max-width: 519px) {
+        width: 100%;
+    }
+
+    @media (max-width: 280px) {
+        width: 100%;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .nav-brand-logo {
-    @include small {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    height: 80px;
+    margin-right: auto;
+}
+
+.nav-brand-logo .big {
+    display: block;
+    width: 80px;
+    height: 80px;
 }
 
 .nav-container .nav-toggle {
@@ -36,10 +72,36 @@ a {
 
     @include small {
         display: block;
-        color: #{$gray-highlight-color};
+        color: #{$default-highlight-color};
         text-align: left;
         font-size: 30px;
+        width: 30px;
+        text-align: center;
     }
+}
+
+.nav-container .categories {
+    display: block;
+    @include small {
+        display: none;
+    }
+}
+
+.nav-container .categories .category {
+    padding: 5px 10px 5px 10px;
+    color: #{$default-text-color};
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nav-container .nav-search {
+    color: #{$default-highlight-color};
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
 }
 
 .categories-container .nav-toggle {
@@ -53,22 +115,19 @@ a {
     }
 }
 
-.nav-brand-logo img {
-    width: 40px;
-    height: 40px;
-}
-
 .categories-container {
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     text-align: center;
     width: 100%;
+    display: none;
 
     @include small {
+        display: block;
         width: 250px;
         height: 100%;
-        background-color: #{$green-highlight-color};
+        background-color: #{$default-highlight-color};
         top: 0;
         bottom: 0;
         position: fixed;
@@ -81,11 +140,12 @@ a {
 
 .categories-container.show {
     transform: translateX(0px);
+    z-index: 3;
 }
 
 .categories-container .category {
     border-radius: 5px;
-    background-color: #{$green-highlight-color};
+    background-color: #{$default-highlight-color};
     padding: 5px 10px 5px 10px;
     color: white;
     font-size: 14px;
@@ -107,6 +167,10 @@ a {
     background-color: #606060;
     color: #999999;
     font-size: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }
 
 .footer a {

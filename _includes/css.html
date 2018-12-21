@@ -1,0 +1,32 @@
+<!-- highlight css -->
+<style type="text/css">
+{% assign color = '#999999' %}
+{% if site.highlight_color == 'green' %}
+{% assign color = '#65996f'%}
+{% elsif site.highlight_color == 'pink' %}
+{% assign color = '#99657a'%}
+{% elsif site.highlight_color == 'violet' %}
+{% assign color = '#7f6599'%}
+{% elsif site.highlight_color == 'blue' %}
+{% assign color = '#657d99'%}
+{% elsif site.highlight_color == 'red' %}
+{% assign color = '#996565'%}
+{% else %}
+{% assign color = '#999999'%}
+{% endif %}
+
+.categories-container .category {
+    background-color: {{color}};
+}
+
+@media (max-width: 768px) {
+    .categories-container {
+        background-color: {{color}};
+    }
+}
+
+.article h2 {
+    color: {{color}};
+}
+
+</style>
